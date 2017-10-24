@@ -2,8 +2,9 @@ package Caesar;
 
 public class CaesarCipher {
 
+
 private static String alpha = "abcdefghijklmnopqrstuvwxyz";
-	
+private static int alphaLength = alpha.length();
 	public static String encode(String plainText, int key ) {
 		String codedWord = "";
 		System.out.println("Text, alpha length = " + alpha.length());
@@ -17,11 +18,13 @@ private static String alpha = "abcdefghijklmnopqrstuvwxyz";
 		System.out.println("\n\n");
 		for (int i=0; i <= plainText.length()-1; i++) {
 			int inx = alpha.indexOf(plainText.charAt(i));
-			inx = inx + key;
-			if (inx >25) {
-				inx = inx - 26;
+			int shiftInx = inx + key;
+			
+			
+			if (shiftInx >=alphaLength) {
+				shiftInx = shiftInx - alphaLength;
 			}
-			codedWord += alpha.charAt(inx);
+			codedWord += alpha.charAt(shiftInx);
 			
 		//	codedWord += plainText.charAt(i);
 		}
