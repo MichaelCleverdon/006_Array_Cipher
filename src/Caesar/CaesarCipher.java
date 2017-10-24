@@ -18,7 +18,7 @@ private static int alphaLength = alpha.length();
 		System.out.println("\n\n");
 		for (int i=0; i <= plainText.length()-1; i++) {
 			int inx = alpha.indexOf(plainText.charAt(i));
-			int shiftInx = inx + key;
+			int shiftInx = (inx + key) % alpha.length();
 			
 			
 			if (shiftInx >=alphaLength) {
