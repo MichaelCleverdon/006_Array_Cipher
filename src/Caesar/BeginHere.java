@@ -13,7 +13,7 @@ public class BeginHere {
 			String plainText = kbd.nextLine().toLowerCase();
 			System.out.println("Please enter a key: ");
 			int key = kbd.nextInt();
-			System.out.println("Your key is: "+ key);
+		
 			String codedText = CaesarCipher.encode(plainText, key);
 			System.out.println("Your secret message is " +codedText);
 	}
