@@ -3,7 +3,7 @@ package Caesar;
 public class CaesarCipher {
 
 
-private static String alpha = "abcdefghijklmnopqrstuvwxyz0123456789.:' ";
+private static String alpha = "abcdefghijklmnopqrstuvwxyz0123456789.:'";
 private static int alphaLength = alpha.length();
 private static String spaceCheck = " ";
 	public static String encode(String plainText, int key ) {
